@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ bill.name }}</span>
+    <p>Company: {{ bill.company }}</p>
+    <p>Description: {{ bill.description }}</p>
+    {% if bill.amount > 0 %}
+        <p>Amount: {{ bill.amount }}</p>
+    {% else %}
+        <p>Amount: Paid</p>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
+
